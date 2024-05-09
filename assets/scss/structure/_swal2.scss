@@ -1,0 +1,30 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+#swal2-title {
+    @media (max-width: 380px) {
+        font-size: 1.5em;
+    }
+}
+
+#swal2-html-container {
+    #currentPassword,
+    #newPassword,
+    #repeatPassword {
+        text-align: center;
+    }
+}
+
+.sub_nueva_contraseña {
+    @media (max-width: 380px) {
+        font-size: 0.8em;
+    }
+}

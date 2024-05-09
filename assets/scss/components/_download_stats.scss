@@ -1,0 +1,67 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+// Botones principales
+.perfil .contenedor_botones {
+	display: grid;
+	width: 100%;
+	padding-left: 10px;
+	gap: 10px;
+	grid-template-columns: 7fr 3fr;
+
+	@media (max-width: 580px) {
+		grid-template-columns: 1fr;
+	}
+
+	@media (max-width: 480px) {
+		justify-content: center;
+		align-items: center;
+		padding-left: 0;
+	}
+
+	@media (max-width: 380px) {
+		gap: 10px;
+	}
+
+	@media((max-width: 350px) and (min-width: 0px)) {
+		gap: 5px;
+	}
+}
+
+.perfil .contenedor_botones .btn_principal {
+	display: grid;
+
+	@media (max-width: 580px) {
+		justify-content: center;
+	}
+}
+
+.perfil .contenedor_botones .btn_segundario {
+	display: flex;
+	justify-content: right;
+	padding-right: 10px;
+	gap: 10px;
+
+	@media (max-width: 580px) {
+		padding-right: 0;
+		justify-content: center;
+	}
+
+	@media(max-width: 350px) {
+		gap: 5;
+		padding: 0;
+		transform: scale(.8);
+	}
+
+	@media(max-width: 300px) {
+		transform: scale(.7);
+	}
+}

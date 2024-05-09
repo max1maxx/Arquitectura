@@ -1,0 +1,247 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+// Importaciones generales
+@use '../vars/colors' as color;
+
+#sidebar {
+	position: fixed;
+	max-width: 220px;
+	width: 100%;
+	background: var(--bg_contents);
+	border-radius: 0px 20px 20px 0px;
+	top: 0;
+	left: 0;
+	height: 100%;
+	overflow-y: auto;
+	scrollbar-width: none;
+	transition: all .3s ease;
+	z-index: 200;
+	box-shadow:
+		10px 10px 10px color.$shadow,
+		-10px -10px 10px color.$white;
+
+	@media (max-width: 300px) {
+		max-width: 220px;
+	}
+}
+
+#sidebar.hide {
+	max-width: 60px;
+}
+
+#sidebar.hide:hover {
+	max-width: 220px;
+	box-shadow:
+		1px 1px 1px color.$shadow,
+		-1px -1px 1px color.$white;
+
+	@media (max-width: 300px) {
+		max-width: 200px;
+	}
+}
+
+#sidebar::-webkit-scrollbar {
+	display: none;
+}
+
+#sidebar .logo_site {
+	width: 55px;
+	width: 55px;
+}
+
+#sidebar .title_text {
+	display: grid;
+	justify-content: start;
+	align-items: center;
+	height: 70%;
+	width: 100%;
+	min-width: 156.1px;
+
+	p {
+		width: 100%;
+		font-size: larger;
+	}
+}
+
+#sidebar .brand {
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	min-height: 64px;
+	max-height: 64px;
+	font-weight: bold;
+	color: var(--title_sidebar);
+	position: sticky;
+
+	z-index: 100;
+	background: color.$bg_elements;
+	transition: all .3s ease;
+	gap: 5px;
+	padding: 5px 0 6px 4px;
+	box-shadow:
+		0px 8px 5px color.$shadow,
+		-10px -10px 10px color.$white;
+
+	@media (max-width: 300px) {}
+}
+
+
+
+#sidebar .side-menu .contenedor_config {
+	display: grid;
+	align-items: center;
+	margin-top: 5px;
+	font-weight: bold;
+	background: darken(color.$bg_elements, 1%);
+	transition: all .3s ease;
+	border-radius: 10px;
+	box-shadow:
+		4px 4px 5px color.$shadow,
+		-10px -10px 10px color.$white;
+}
+
+#sidebar .side-menu .contenedor_config li {
+	display: grid;
+	align-items: center;
+	border-radius: 10px;
+}
+
+#sidebar .side-menu .contenedor_config:hover {
+	box-shadow: none;
+}
+
+#sidebar .side-menu .contenedor_config li:hover,
+#sidebar .side-dropdown a:hover {
+	background-color: var(--bg_hover_elements);
+	box-shadow:
+		inset 8px 8px 12px darken(color.$shadow, 10%),
+		inset -8px -8px 12px darken(color.$white, 10%);
+}
+
+#sidebar .icon {
+	min-width: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 6px;
+	font-size: 15px;
+}
+
+#sidebar .icon-right {
+	margin-left: auto;
+	transition: all .3s ease;
+}
+
+#sidebar .side-menu {
+	margin: 36px 0;
+	padding: 0 20px;
+	transition: all .3s ease;
+}
+
+#sidebar.hide .side-menu {
+	padding: 0 6px;
+}
+
+#sidebar.hide:hover .side-menu {
+	padding: 0 20px;
+}
+
+#sidebar .side-menu a {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	color: var(--font_sidebar);
+	padding: 12px 16px 12px 0;
+	transition: all .3s ease;
+	border-radius: 10px;
+	margin: 4px 0;
+	white-space: nowrap;
+}
+
+#sidebar .side-menu>li>a:hover,
+#sidebar .side-dropdown>li>a:hover {
+	background: var(--bg_hover_elements);
+	box-shadow:
+		inset 8px 8px 12px darken(color.$shadow, 10%),
+		inset -8px -8px 12px darken(color.$white, 10%);
+}
+
+#sidebar .side-menu>li>a.active .icon-right {
+	transform: rotateZ(90deg);
+}
+
+#sidebar .side-menu>li>a.active,
+#sidebar .side-menu>li>a.active:hover,
+#sidebar .side-dropdown>li>a.active,
+#sidebar .side-dropdown>li>a.active:hover {
+	background: color.$primary;
+	color: var(--bg_contents);
+	box-shadow:
+		inset 8px 8px 12px darken(color.$primary, 10%),
+		inset -8px -8px 12px lighten(color.$primary, 10%);
+}
+
+#sidebar .side-menu .contenedor_config>li>a.active,
+#sidebar .side-menu .contenedor_config>li>a.active:hover {
+	background: darken(color.$primary, 10%);
+	color: var(--bg_contents);
+	box-shadow:
+		inset 8px 8px 12px darken(color.$primary, 20%),
+		inset -8px -8px 12px lighten(color.$primary, 10%);
+}
+
+#sidebar .side-menu>li>a.sidebar_inicio {
+	border: 1px solid color.$shadow;
+}
+
+#sidebar .divider {
+	margin-top: 24px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--section_sidebar);
+	transition: all .3s ease;
+	white-space: nowrap;
+}
+
+#sidebar.hide:hover .divider {
+	text-align: left;
+}
+
+#sidebar.hide .divider {
+	text-align: center;
+}
+
+.side_list {
+	cursor: pointer;
+}
+
+#sidebar .side-dropdown {
+	padding-left: 10px;
+	max-height: 0;
+	overflow-y: hidden;
+	transition: all .15s ease;
+	cursor: pointer;
+}
+
+#sidebar .side-dropdown.show {
+	max-height: 1000px;
+}
+
+// Boton de lista de botones desplegable
+.side-dropdown a.active {
+	background: darken(color.$primary, 10%);
+	color: var(--bg_contents) !important;
+	box-shadow:
+		inset 8px 8px 12px darken(color.$primary, 20%),
+		inset -8px -8px 12px lighten(color.$primary, 10%);
+}

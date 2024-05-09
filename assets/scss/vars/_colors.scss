@@ -1,0 +1,87 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+// Mesclar 2 colores
+@function interpolate-colors($color-1, $color-2, $percentage) {
+	@return mix($color-1, $color-2, $percentage);
+}
+
+// Colores de pagina
+$bg_elements: #ecf0f3;
+$shadow: #d1d9e6;
+$gray: #a0a5a8;
+$white: #f9f9f9;
+$black: #000;
+$primary: #406c44;
+$secundary_light: lighten($primary, 5%);
+
+$bg_box_notification: #202227;
+$shadow_box_notification: #17181c;
+$btns_shadow_notification: #e3e4e8;
+$btn_time_notification: #716b41;
+
+:root {
+	--bg: #F1F0F6;
+	--bg_contents: #fff;
+	--dark-grey: #8d8d8d;
+
+	--title_sidebar: #000;
+	--section_sidebar: #8D8D8D;
+	--font_sidebar: #000;
+
+	--bg_hover_elements: #F1F0F6;
+
+	--focus_input_1: #{$primary};
+	--focus_input_2: #{lighten($primary, 30%)};
+
+	--red: #ff0000;
+	--dark: #000;
+	--gray: #cccccc;
+}
+
+// Color de botones
+$btn-color-eliminar: #E74C3C;
+$btn-color-enviar: #27AE60;
+$btn-color-buscar: #2980B9;
+$btn-color-editar: #F39C12;
+$btn-color-cancelar: #95A5A6;
+$btn-color-nuevo: #3498DB;
+$btn-color-actualizar: #2ECC71;
+$btn-color-ingresar: #1a7500;
+$button-bg: #5c67ff;
+$list-bg: #fff;
+$text-color: #1c3991;
+$text-color-hover: #5c67ff;
+
+$btn-color-copy: #1e88e5;
+$btn-color-excel: #4caf50;
+$btn-color-csv: #ff9800;
+
+$btn-color-navegacion: #009c8c;
+
+
+/**
+*  Boton de usuarios desacticados
+*/
+$bg-gradient-yellow-2: linear-gradient(135deg, hsla(0, 0%, 63%, 0.852) 0%, darken($primary, 20%) 59.86%, hsl(240, 2%, 13%));
+
+$bg-gradient-yellow-3: linear-gradient(to bottom right, rgb(255, 107, 107) 0%, hsl(0, 100%, 23%) 50%);
+
+
+// Fondos
+$background-color-image: $primary;
+$background-image-fondo1: url('../../img/background/fondo1.svg');
+
+$background-color-fondo2: $primary;
+$background-image-fondo2: url('../../img/background/fondo2.svg');
+
+$background-attachment-fixed: fixed;
+$background-size-cover: cover;

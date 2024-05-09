@@ -1,0 +1,118 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+//sass --watch assets/scss/Auth/_admin.scss:assets/css/Auth/admin.css --load-path=assets/scss
+
+@use '../vars/colors' as color;
+@use '../animations/keyframes' as animate;
+
+@use '../structure/static';
+
+.cookie-message {
+    display: none !important;
+}
+
+body {
+    background-color: color.$background-color-image;
+    background-image: color.$background-image-fondo2;
+    background-attachment: color.$background-attachment-fixed;
+    background-size: color.$background-size-cover;
+}
+
+.main {
+    position: relative;
+    padding: 25px;
+    background-color: color.$bg_elements;
+    box-shadow:
+        10px 10px 10px color.$shadow,
+        -10px -10px 10px color.$white;
+    border-radius: 12px;
+    width: 400px;
+    min-height: 400px;
+    height: 400px;
+    animation: popAnimation 1s ease-in-out;
+    box-shadow: 3px 3px 15px rgba(color.$black, .5);
+
+    @media(max-width: 480px) {
+        width: 300px;
+        height: 450px;
+    }
+
+    @media((max-width: 335px) and (min-width: 0px)) {
+        width: 250px;
+        height: 450px;
+    }
+
+    .switch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding: 50px;
+        z-index: 200;
+        transition: animate.$transition;
+        background-color: color.$bg_elements;
+        overflow: hidden;
+
+        form {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 50px 55px;
+
+            &_input {
+                width: 300px;
+                outline: none;
+        
+                @media(max-width: 480px) {
+                    width: 250px;
+                }
+        
+                @media((max-width: 335px) and (min-width: 0px)) {
+                    width: 230px;
+                }
+            }
+        }
+
+        .title {
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 1.5;
+            text-align: center;
+            color: color.$black;
+        }
+        
+        .description {
+            font-size: 18px;
+            letter-spacing: .25px;
+            text-align: center;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .recuperarContrasenia {
+            text-decoration: none;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            background: linear-gradient(to right, color.$primary, color.$btn-color-navegacion);
+        }
+    }
+}

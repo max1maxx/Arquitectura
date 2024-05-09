@@ -1,0 +1,65 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+// Importaciones generales
+@use '../vars/colors' as color;
+
+@use '../structure/scrool';
+@use '../structure/sidebar';
+@use '../structure/content';
+@use '../structure/navbar';
+@use '../structure/main';
+@use '../structure/swal2';
+
+
+* {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	background: var(--bg);
+	overflow-x: hidden;
+    user-select: none;
+	padding-right: 0 !important;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+hr {
+	width: 100%;
+	opacity: 20%;
+}
+
+
+
+
+// Estilos q aun no se saben //
+//Creo q es del boton flotante para mas opciones 
+// .list-container .more-button-list a.active,
+// .list-container .more-button-list a.active:hover {
+// 	background: darken(color.$primary, 10%);
+// 	color: var(--bg_elements);
+// 	box-shadow:
+// 		inset 8px 8px 12px darken(color.$primary, 20%),
+// 		inset -8px -8px 12px lighten(color.$primary, 10%);
+// }

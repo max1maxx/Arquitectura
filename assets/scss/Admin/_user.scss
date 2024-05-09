@@ -1,0 +1,111 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+//sass --watch assets/scss/Admin/_user.scss:assets/css/Admin/user.css --load-path=assets/scss
+
+// Importaciones generales
+@use 'brackets';
+
+// Importacion por componentes 
+@use '../components/modal';
+@use '../components/download_stats';
+@use '../components/table';
+@use '../components/input';
+@use '../components/buttons';
+@use '../components/switch';
+
+
+.contenedor_perfil .perfil {
+	display: grid;
+	padding: 20px;
+	border-radius: 10px;
+	background: var(--bg_contents);
+	border: 1px solid rgba(var(--dark), .05);
+	gap: 15px;
+
+    @media (max-width: 400px) {
+		padding: 10px 0px;
+	}
+
+	@media (max-width: 335px) {
+		display: block;
+	}
+}
+
+// POPUP
+.form_contenedor {
+    display: grid;
+    padding: 20px;
+}
+
+#usuario_form_contenedor {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    @media (max-width: 950px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+#usuario_form_contenedor div .input {
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+
+    @media (max-width: 1050px) {
+        padding-left: 10px;
+    }
+
+    @media (max-width: 375px) {
+        font-size: 10px;
+        height: 30px;
+    }
+
+    @media (max-width: 335px) {
+        font-size: 8px;
+    }
+}
+
+#indicadores_form_contenedor {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    @media (max-width: 950px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+#indicadores_form_contenedor div .input {
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+
+    @media (max-width: 1050px) {
+        padding-left: 10px;
+    }
+
+    @media (max-width: 375px) {
+        font-size: 10px;
+        height: 30px;
+    }
+
+    @media (max-width: 335px) {
+        font-size: 8px;
+    }
+}
+
+// Boton de cambio de contraseña
+#campoCambiarContraseña,
+#campoCambiarContraseña a {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

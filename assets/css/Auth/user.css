@@ -1,0 +1,1522 @@
+@charset "UTF-8";
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+:root {
+  --bg: #F1F0F6;
+  --bg_contents: #fff;
+  --dark-grey: #8d8d8d;
+  --title_sidebar: #000;
+  --section_sidebar: #8D8D8D;
+  --font_sidebar: #000;
+  --bg_hover_elements: #F1F0F6;
+  --focus_input_1: #406c44;
+  --focus_input_2: #8bba8f;
+  --red: #ff0000;
+  --dark: #000;
+  --gray: #cccccc;
+}
+
+/**
+*  Boton de usuarios desacticados
+*/
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+@keyframes popAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  12.5% {
+    transform: scale(1.1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  37.5% {
+    transform: scale(1.07);
+  }
+  50% {
+    transform: scale(0.93);
+  }
+  62.5% {
+    transform: scale(1.04);
+  }
+  75% {
+    transform: scale(0.96);
+  }
+  87.5% {
+    transform: scale(1.01);
+  }
+}
+@media (max-width: 580px) {
+  .nav {
+    overflow: auto;
+  }
+}
+@keyframes goLeft {
+  from {
+    transform: translateX(0%) scale(1);
+  }
+  to {
+    transform: translateX(-120%) scale(0.1);
+  }
+}
+@keyframes center {
+  from {
+    transform: translateX(0%) scale(0.1);
+  }
+  to {
+    transform: translateX(0%) scale(1);
+  }
+}
+@keyframes goRight {
+  from {
+    transform: translateX(0%) scale(1);
+  }
+  to {
+    transform: translateX(120%) scale(0.1);
+  }
+}
+/**
+* Boton flotande de configuraciones
+*/
+@keyframes moveButton {
+  from {
+    right: 0;
+  }
+  to {
+    right: -15px;
+  }
+}
+@keyframes moveButtonHover {
+  from {
+    right: -15px;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes onePulse {
+  0% {
+    box-shadow: 0px 0px 0px 0px rgba(92, 103, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 12px rgba(92, 103, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 4px rgba(92, 103, 255, 0.3);
+  }
+}
+@keyframes fadeInItem {
+  100% {
+    transform: translatex(0px);
+    opacity: 1;
+  }
+}
+@keyframes shadow-transition-target {
+  0% {
+    box-shadow: 0.125rem 0.125rem 0.25rem #b0bed4, -0.125rem -0.125rem 0.25rem #e0e0e0;
+  }
+  100% {
+    box-shadow: 0.3rem 0.3rem 0.6rem #b0bed4, -0.2rem -0.2rem 0.5rem #e0e0e0;
+  }
+}
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+.button {
+  width: 180px;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.15px;
+  background-color: #1a2c1c;
+  color: #f9f9f9;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border: none;
+  outline: none;
+}
+@media (max-width: 380px) {
+  .button {
+    height: 40px;
+  }
+}
+@media ((max-width: 335px) and (min-width: 0px)) {
+  .button {
+    width: 100%;
+    padding: 0 25px;
+  }
+}
+.button:hover {
+  background-color: #070c08;
+}
+
+.button_container_register,
+.button_container_login {
+  z-index: 100;
+  display: grid;
+}
+.button_container_register .button1,
+.button_container_login .button1 {
+  width: 180px;
+  height: 40px;
+  border-radius: 0px 5px 0px 0px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #f9f9f9;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.button_container_register .button1:hover::after,
+.button_container_login .button1:hover::after {
+  background-color: rgba(36, 60, 38, 0.7);
+}
+@media ((max-width: 350px) and (min-width: 0px)) {
+  .button_container_register .button1,
+  .button_container_login .button1 {
+    font-size: 10px;
+    height: 30px;
+    width: 150px;
+    transform: scale(0.9);
+  }
+}
+.button_container_register .button1::after,
+.button_container_login .button1::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+  background-color: rgba(26, 44, 28, 0.6);
+  border-radius: 0px 5px 0px 0px;
+  z-index: -1;
+}
+
+.button2 {
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #f9f9f9;
+  box-shadow: 5px 5px 5px #d1d9e6, -5px -5px 5px #f9f9f9;
+  border: none;
+  outline: none;
+}
+@media ((max-width: 350px) and (min-width: 0px)) {
+  .button2 {
+    font-size: 10px;
+    height: 30px;
+    width: 150px;
+    transform: scale(0.9);
+  }
+}
+
+.button3 {
+  width: 60px;
+  height: 40px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #f9f9f9;
+  box-shadow: 5px 5px 5px #d1d9e6, -5px -5px 5px #f9f9f9;
+  border: none;
+  outline: none;
+}
+
+.button4 {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+@media (max-width: 480px) {
+  .button4 {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 375px) {
+  .button4 {
+    transform: scale(0.8);
+  }
+}
+@media ((max-width: 350px) and (min-width: 0px)) {
+  .button4 {
+    height: 30px;
+  }
+}
+
+.button5 {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #f9f9f9;
+  box-shadow: 5px 5px 5px #d1d9e6, -5px -5px 5px #f9f9f9;
+  border: none;
+  outline: none;
+}
+.button5 i {
+  font-size: 30px;
+}
+@media ((max-width: 350px) and (min-width: 0px)) {
+  .button5 {
+    font-size: 10px;
+    height: 30px;
+    width: 150px;
+    transform: scale(0.9);
+  }
+}
+
+.button_forma {
+  width: 180px;
+  height: 40px;
+  color: #f9f9f9;
+  border-radius: 0px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  filter: drop-shadow(3px 3px 1.5px rgba(0, 0, 0, 0.5));
+}
+.button_forma:hover {
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5));
+}
+.button_forma:hover::after {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.button_forma::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  border-radius: 0px;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.efects__button {
+  cursor: pointer;
+}
+.efects__button:hover {
+  box-shadow: 6px 6px 10px #d1d9e6, -6px -6px 10px #f9f9f9;
+  transform: scale(0.985);
+  transition: 0.25s;
+}
+.efects__button:active, .efects__button:focus {
+  box-shadow: 2px 2px 6px #d1d9e6, -2px -2px 6px #f9f9f9;
+  transform: scale(0.97);
+  transition: 0.25s;
+}
+
+.efects2__button2 {
+  cursor: pointer;
+}
+.efects2__button2:hover, .efects2__button2:active, .efects2__button2:focus {
+  transition: 0.25s;
+}
+
+.btn_actualizar {
+  background-color: #2ECC71;
+}
+
+.btn_actualizar:hover {
+  background-color: #25a25a;
+}
+
+.btn_buscar {
+  background-color: #2980B9;
+}
+
+.btn_buscar:hover {
+  background-color: #20638f;
+}
+
+.btn_cancelar {
+  background-color: #95A5A6;
+}
+
+.btn_cancelar:hover {
+  background-color: #798d8f;
+}
+
+.btn_editar {
+  background-color: #F39C12;
+}
+
+.btn_editar:hover {
+  background-color: #c87f0a;
+}
+
+.btn_eliminar {
+  background-color: #E74C3C;
+}
+
+.btn_eliminar:hover {
+  background-color: #d62c1a;
+}
+
+.btn_enviar {
+  background-color: #27AE60;
+}
+
+.btn_enviar:hover {
+  background-color: #1e8449;
+}
+
+.btn_ingresar {
+  background-color: #1a7500;
+}
+
+.btn_ingresar:hover {
+  background-color: #0f4200;
+}
+
+.btn_nuevo {
+  background-color: #3498DB;
+}
+
+.btn_nuevo:hover {
+  background-color: #217dbb;
+}
+
+.btn_copy {
+  background-color: #1e88e5;
+}
+
+.btn_copy:hover {
+  background-color: #166dba;
+}
+
+.btn_excel {
+  background-color: #4caf50;
+}
+
+.btn_excel:hover {
+  background-color: #3d8b40;
+}
+
+.btn_csv {
+  background-color: #ff9800;
+}
+
+.btn_csv:hover {
+  background-color: #cc7a00;
+}
+
+.btn_editar2 {
+  border: 1px solid #F39C12;
+  color: #F39C12;
+}
+
+.btn_editar2:hover {
+  background-color: #f39c12;
+  color: #f9f9f9;
+}
+
+.btn_eliminar2 {
+  border: 1px solid #E74C3C;
+  color: #E74C3C;
+}
+
+.btn_eliminar2:hover {
+  background-color: #e74c3c;
+  color: #f9f9f9;
+}
+
+.btn_organizaciones2 {
+  border: 1px solid #009c8c;
+  color: #009c8c;
+}
+
+.btn_organizaciones2:hover {
+  background-color: #009c8c;
+  color: #f9f9f9;
+}
+
+.btn_navegacion {
+  background-color: #009c8c;
+}
+
+.btn_navegacion:hover {
+  background-color: #008375;
+}
+
+.btn_navegacion:disabled {
+  cursor: default;
+  background-color: #005047;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+/*
+* Boton top
+*/
+#btn_top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: #406c44;
+  color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+}
+#btn_top:hover {
+  background-color: #2d4c30;
+}
+@media ((max-width: 335px) and (min-width: 0px)) {
+  #btn_top {
+    bottom: 5px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+}
+
+/**
+* Boton para mas configuraciones
+*/
+.list-container {
+  position: fixed;
+  top: 200px;
+  right: 40px;
+}
+.list-container.active .more-button-list {
+  opacity: 1;
+  transform: scale(1);
+}
+.list-container.active .more-button-list-item {
+  animation: fadeInItem 0.6s 0.2s forwards;
+}
+.list-container.active .more-button-list-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.list-container.active .more-button-list-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.list-container.active .more-button-list-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.list-container.active .more-button {
+  animation: onePulse 0.6s forwards linear;
+}
+.list-container.active .menu-icon-wrapper {
+  transform: rotate(-45deg);
+}
+.list-container.active .menu-icon-line.first {
+  transform: rotate(-90deg) translateX(1px);
+}
+.list-container.active .menu-icon-line.last {
+  transform: rotate(-90deg) translateX(-1px);
+}
+
+.more-button {
+  background-color: #5c67ff;
+  box-shadow: 0px 0px 0px 4px rgba(64, 108, 68, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  opacity: 0.5;
+  padding: 0;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f9f9f9;
+  position: fixed;
+  z-index: 2;
+  animation: moveButton 0.3s ease-out forwards;
+  right: -15px;
+}
+.more-button:hover, .more-button:focus {
+  box-shadow: 0px 0px 0px 8px rgba(64, 108, 68, 0.3);
+  background-color: #4854ff;
+  opacity: 1;
+  right: auto;
+  animation: moveButtonHover 0.3s ease-in forwards;
+}
+.more-button:focus {
+  outline: 0;
+}
+.more-button-list {
+  background-color: #fff;
+  border-radius: 8px;
+  list-style-type: none;
+  width: 170px;
+  height: 185px;
+  box-shadow: 0px 0px 4px 4px rgba(150, 157, 249, 0.16);
+  padding: 0;
+  padding: 6px 10px;
+  position: fixed;
+  right: 24px;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: all 0.3s ease 0.1s;
+}
+.more-button-list li {
+  opacity: 0;
+}
+.more-button-list li:hover {
+  border-radius: 5px;
+}
+.more-button-list-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--dark);
+  padding: 10px;
+  border-radius: 4px;
+  gap: 5px;
+  padding-left: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in;
+}
+.more-button-list-item a:hover {
+  color: #5c67ff;
+}
+.more-button-list-item a:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: calc(100% - 24px);
+  left: 12px;
+  bottom: 0;
+  background-color: rgba(132, 160, 244, 0.1);
+}
+.more-button-list-item a:last-child:after {
+  display: none;
+}
+.more-button-list-item a svg {
+  width: 18px;
+  height: 18px;
+}
+.more-button-list-item a span {
+  display: inline-block;
+  line-height: 20px;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.menu-icon-wrapper {
+  border-radius: 2px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 330ms ease-out;
+}
+
+.menu-icon-line {
+  background-color: #f9f9f9;
+  border-radius: 2px;
+  width: 100%;
+  height: 2px;
+}
+.menu-icon-line.half {
+  width: 50%;
+}
+.menu-icon-line.first {
+  transition: transform 300ms cubic-bezier(0.52, -0.8, 0.52, 0.52);
+  transform-origin: right;
+}
+.menu-icon-line.last {
+  align-self: flex-end;
+  transition: transform 300ms cubic-bezier(0.52, -0.8, 0.52, 0.52);
+  transform-origin: left;
+}
+
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+.requerido {
+  font-size: 10px;
+  color: var(--red);
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  margin: 4px 0;
+  border: 1px solid transparent;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 13px;
+  letter-spacing: 0.15px;
+  outline: none;
+  background-color: #ecf0f3;
+  transition: 0.25s ease;
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9;
+}
+.input:focus {
+  box-shadow: inset 4px 4px 4px #d1d9e6, inset -4px -4px 4px #f9f9f9;
+}
+
+.input:focus,
+.input:active {
+  border: 1px solid var(--focus_input_1);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 1px var(--focus_input_1), 0 0 0 4px var(--focus_input_2);
+}
+
+.inactive {
+  background-color: #dce4e9 !important;
+  box-shadow: inset 2px 2px 4px #b0bed4, inset -2px -2px 4px #e0e0e0;
+  cursor: default;
+}
+
+.inactive:focus,
+.inactive:active {
+  border: 1px solid #cbe0cd;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 75px;
+  max-height: 300px;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+@media (max-width: 380px) {
+  #swal2-title {
+    font-size: 1.5em;
+  }
+}
+
+#swal2-html-container #currentPassword,
+#swal2-html-container #newPassword,
+#swal2-html-container #repeatPassword {
+  text-align: center;
+}
+
+@media (max-width: 380px) {
+  .sub_nueva_contraseña {
+    font-size: 0.8em;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  border-radius: 12px;
+}
+
+/* Generic */
+body {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  top: 50%;
+  left: 50%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  background-color: #ecf0f3;
+  color: #a0a5a8;
+  align-content: center;
+  overflow: hidden !important;
+  transform: translate(-50%, -50%);
+}
+
+/* Anula el estilo body.swal2-height-auto */
+body.swal2-height-auto {
+  height: 100vh !important;
+}
+
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+.cookie-message {
+  display: none !important;
+}
+
+body {
+  background-color: #406c44;
+  background-image: url("../../img/background/fondo1.svg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  position: absolute;
+  display: grid;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  gap: 30px;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1024px) {
+  .container {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    font-size: 12px;
+  }
+}
+@media (max-width: 580px) {
+  .container {
+    gap: 10px;
+  }
+}
+@media (max-width: 335px) {
+  .container {
+    font-size: 10px;
+  }
+}
+
+.marca_logo {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 1024px) {
+  .marca_logo {
+    width: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .marca_logo {
+    width: 200px;
+  }
+}
+@media (max-width: 335px) {
+  .marca_logo {
+    width: 150px;
+  }
+}
+
+.button_container_register,
+.button_container_login {
+  position: absolute;
+  align-items: center;
+  z-index: 100;
+  top: 0px;
+}
+
+.button_container_register {
+  right: 0px;
+  filter: drop-shadow(-3px 3px 1.5px rgba(0, 0, 0, 0.5));
+}
+.button_container_register:hover {
+  filter: drop-shadow(-3px 3px 5px rgba(0, 0, 0, 0.5));
+}
+.button_container_register .boton_registro {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+@media (max-width: 480px) {
+  .button_container_register .boton_registro {
+    right: 0px;
+  }
+}
+.button_container_register .boton_registro i {
+  font-size: 35px;
+  margin-left: 10px;
+}
+.button_container_register .button1::after {
+  width: 230px;
+  height: 40px;
+  left: -50px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+}
+
+.button_container_login {
+  left: 0px;
+  filter: drop-shadow(3px 3px 1.5px rgba(0, 0, 0, 0.5));
+}
+.button_container_login:hover {
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5));
+}
+.button_container_login .boton_login {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+@media (max-width: 480px) {
+  .button_container_login .boton_login {
+    left: 0px;
+  }
+}
+.button_container_login .boton_login i {
+  font-size: 35px;
+  margin-right: 10px;
+}
+.button_container_login .button1::after {
+  width: 230px;
+  height: 40px;
+  right: -50px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+}
+
+.main1 {
+  position: relative;
+  width: 800px;
+  min-height: 500px;
+  height: 500px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+  animation: popAnimation 1s ease-in-out;
+}
+.main1.dismissed {
+  animation: goLeft 0.5s ease 1 forwards;
+}
+.main1.created {
+  animation: center 0.5s ease 1 forwards;
+}
+@media (max-width: 1024px) {
+  .main1 {
+    width: 650px;
+    height: 100vh;
+    max-height: 450px;
+  }
+}
+@media (max-width: 768px) {
+  .main1 {
+    width: 450px;
+    max-height: 650px;
+  }
+}
+@media (max-width: 580px) {
+  .main1 {
+    width: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .main1 {
+    width: 300px;
+    max-height: 650px;
+  }
+}
+@media ((max-width: 335px) and (min-width: 0px)) {
+  .main1 {
+    width: 250px;
+    max-height: 600px;
+  }
+}
+.main1 .logo_login {
+  width: 150px;
+}
+@media (max-width: 768px) {
+  .main1 .logo_login {
+    width: 200px;
+  }
+}
+@media (max-width: 580px) {
+  .main1 .logo_login {
+    width: 200px;
+  }
+}
+@media ((max-width: 335px) and (min-width: 0px)) {
+  .main1 .logo_login {
+    width: 150px;
+  }
+}
+.main1 .form_input {
+  width: 350px;
+  outline: none;
+}
+@media (max-width: 1024px) {
+  .main1 .form_input {
+    height: 50px;
+    width: 400px;
+    font-size: 17px;
+  }
+}
+@media (max-width: 768px) {
+  .main1 .form_input {
+    height: 50px;
+    width: 350px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 580px) {
+  .main1 .form_input {
+    width: 300px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+  .main1 .form_input {
+    width: 250px;
+    font-size: 12px;
+  }
+}
+@media ((max-width: 335px) and (min-width: 0px)) {
+  .main1 .form_input {
+    margin-top: 10px;
+    width: 200px;
+    font-size: 10px;
+  }
+}
+.main1 .btn_contenedor_login {
+  display: grid;
+  margin-top: 15px;
+  padding: 10px;
+  gap: 10px;
+  justify-items: center;
+}
+@media (max-width: 768px) {
+  .main1 .btn_contenedor_login {
+    margin-top: 25px;
+  }
+}
+.main1 .btn_contenedor_login .button_forma {
+  transform: scale(0.8);
+}
+.main1 .btn_contenedor_login .button_forma::after {
+  width: 180px;
+  height: 40px;
+  top: 0%;
+  left: 0%;
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 60%, 90% 100%, 0 100%, 0 40%);
+  clip-path: polygon(10% 0, 100% 0, 100% 60%, 90% 100%, 0 100%, 0 40%);
+}
+
+.main2 {
+  display: none;
+  width: 800px;
+  min-height: 500px;
+  height: 500px;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+  animation: popAnimation 1s ease-in-out;
+}
+.main2 .switch_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+}
+@media (max-width: 580px) {
+  .main2 .switch_container {
+    padding-top: 15px;
+    align-items: normal;
+  }
+}
+@media (max-width: 450px) {
+  .main2 .switch_container {
+    padding-top: 20px;
+  }
+}
+.main2.dismissed {
+  animation: goRight 0.5s ease 1 forwards;
+}
+.main2.created {
+  animation: center 0.5s ease 1 forwards;
+}
+@media (max-width: 1024px) {
+  .main2 {
+    width: 650px;
+    height: 100vh;
+    max-height: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .main2 {
+    width: 450px;
+    max-height: 650px;
+  }
+}
+@media (max-width: 580px) {
+  .main2 {
+    width: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .main2 {
+    width: 300px;
+    max-height: 650px;
+  }
+}
+@media ((max-width: 335px) and (min-width: 0px)) {
+  .main2 {
+    width: 250px;
+    max-height: 600px;
+  }
+}
+.main2 .form_contenedor {
+  display: grid;
+  padding: 20px;
+}
+.main2 #usuario_form_contenedor {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 5px;
+}
+@media (max-width: 768px) {
+  .main2 #usuario_form_contenedor {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    row-gap: 15px;
+  }
+}
+@media (max-width: 580px) {
+  .main2 #usuario_form_contenedor {
+    grid-template-columns: 1fr;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    row-gap: 5px;
+  }
+}
+@media (max-width: 450px) {
+  .main2 #usuario_form_contenedor {
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 335px) {
+  .main2 #usuario_form_contenedor {
+    padding-bottom: 5px;
+  }
+}
+.main2 #usuario_form_contenedor div label {
+  color: #000;
+}
+@media ((max-width: 335px) and (min-width: 0px)) {
+  .main2 #usuario_form_contenedor div label {
+    font-size: 10px;
+  }
+}
+.main2 #usuario_form_contenedor div .input {
+  width: 100%;
+  border: 1px solid transparent;
+  outline: none;
+}
+@media (max-width: 1050px) {
+  .main2 #usuario_form_contenedor div .input {
+    padding-left: 10px;
+  }
+}
+@media (max-width: 580px) {
+  .main2 #usuario_form_contenedor div .input {
+    height: 30px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 375px) {
+  .main2 #usuario_form_contenedor div .input {
+    font-size: 10px;
+  }
+}
+@media (max-width: 335px) {
+  .main2 #usuario_form_contenedor div .input {
+    font-size: 8px;
+  }
+}
+.main2 .contenedor_btn_registro_usuario {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.main2 .button {
+  height: 40px;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 2;
+  color: #000;
+}
+@media (max-width: 1024px) {
+  .title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+}
+@media (max-width: 580px) {
+  .title {
+    font-size: 23px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    transform: scale(1.3);
+    font-size: 16px;
+  }
+}
+@media (max-width: 380px) {
+  .title {
+    line-height: 3;
+  }
+}
+@media ((max-width: 335px) and (min-width: 0px)) {
+  .title {
+    padding-top: 15px;
+    transform: scale(1.8);
+    font-size: 10px;
+  }
+}
+
+.description {
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  text-align: center;
+  line-height: 2.5;
+}
+@media (max-width: 1024px) {
+  .description {
+    font-size: 17px;
+    transform: scale(0.8);
+    line-height: 1.6;
+  }
+}
+@media (max-width: 768px) {
+  .description {
+    font-size: 18px;
+  }
+}
+@media (max-width: 580px) {
+  .description {
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .description {
+    font-size: 13px;
+  }
+}
+@media ((max-width: 335px) and (min-width: 0px)) {
+  .description {
+    transform: scale(1);
+    line-height: 2;
+    padding-top: 15px;
+    font-size: 10px;
+  }
+}
+
+.description_register {
+  padding: 0px 25px;
+  color: rgba(0, 0, 0, 0.782);
+}
+@media (max-width: 768px) {
+  .description_register {
+    font-size: 12px;
+  }
+}
+@media ((max-width: 335px) and (min-width: 0px)) {
+  .description_register {
+    padding-top: 15px;
+    font-size: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.switch {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 50px 50px 50px 50px;
+  z-index: 200;
+  background-color: #ecf0f3;
+  overflow: hidden;
+}
+.switch_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+}
+.switch_circle {
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #ecf0f3;
+  box-shadow: inset 8px 8px 12px #d1d9e6, inset -8px -8px 12px #f9f9f9;
+  bottom: -60%;
+  left: -60%;
+  transition: 1.25s;
+}
+.switch_circle_t {
+  top: -30%;
+  left: 60%;
+  width: 300px;
+  height: 300px;
+}
+@media (max-width: 1024px) {
+  .switch_circle_t {
+    left: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .switch_circle_t {
+    top: -20%;
+    left: 60%;
+  }
+}
+.switch_circle_t2 {
+  top: 18%;
+  left: 15%;
+  width: 100px;
+  height: 100px;
+}
+@media (max-width: 1024px) {
+  .switch_circle_t2 {
+    top: 13%;
+    left: 15%;
+  }
+}
+@media (max-width: 768px) {
+  .switch_circle_t2 {
+    top: 10%;
+    left: 10%;
+  }
+}
+@media (max-width: 480px) {
+  .switch_circle_t2 {
+    top: 5%;
+    left: 8%;
+  }
+}
+.switch_circle_t3 {
+  top: 40%;
+  left: 90%;
+  width: 200px;
+  height: 200px;
+}
+@media (max-width: 1024px) {
+  .switch_circle_t3 {
+    left: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .switch_circle_t3 {
+    top: 50%;
+    left: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .switch_circle_t3 {
+    top: 40%;
+    left: 95%;
+  }
+}
+@media (max-width: 1024px) {
+  .switch_circle {
+    bottom: -70%;
+  }
+}
+@media (max-width: 768px) {
+  .switch_circle {
+    bottom: -50%;
+  }
+}
+
+.main_a,
+.main_j,
+.main_v,
+.main_d {
+  transform: scale(0.4);
+}
+
+.contenedor_letras_login {
+  position: relative;
+  bottom: -16rem;
+  left: 150%;
+  width: 150px;
+}
+@media (max-width: 1024px) {
+  .contenedor_letras_login {
+    left: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor_letras_login {
+    left: -25%;
+    bottom: -20rem;
+  }
+}
+@media (max-width: 480px) {
+  .contenedor_letras_login {
+    bottom: -19rem;
+  }
+}
+@media (max-width: 335px) {
+  .contenedor_letras_login {
+    bottom: -18rem;
+  }
+}
+
+.contenedor_letras_register {
+  position: absolute;
+  bottom: -2rem;
+  left: 70%;
+  width: 150px;
+}
+@media (max-width: 1024px) {
+  .contenedor_letras_register {
+    left: 65%;
+  }
+}
+@media (max-width: 768px) {
+  .contenedor_letras_register {
+    left: 25%;
+    bottom: -6rem;
+  }
+}
+
+/*# sourceMappingURL=user.css.map */

@@ -1,0 +1,227 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+//sass --watch assets/scss/Account/_profile.scss:assets/css/Account/profile.css --load-path=assets/scss
+
+// Importaciones generales
+@use '../Admin/brackets';
+@use '../vars/colors' as color;
+
+// Importacion por componentes 
+@use '../components/table';
+@use '../components/input';
+@use '../components/buttons';
+@use '../components/switch';
+
+
+
+.contenedor_perfil .perfil {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    padding-top: 15px;
+
+    @media (max-width: 950px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*
+* Foto usuario
+*/
+.foto_perfil {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @media (max-width: 950px) {
+        display: grid;
+        justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+        display: block;
+    }
+}
+
+.contenedor_foto>div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    @media (max-width: 950px) {
+        transform: scale(.5);
+    }
+}
+
+.fotoUsuario {
+    width: 100%;
+    border-radius: 10px;
+    transition: .5s ease-in-out all;
+    background-color: color.$primary;
+
+}
+
+.fotoUsuario:hover {
+    filter: grayscale(90%);
+    transition: .5s ease-in-out all;
+}
+
+.image-upload>input {
+    display: none;
+}
+
+.image-upload img {
+    cursor: pointer;
+
+    @media (max-width: 950px) {
+        height: 200px;
+    }
+
+    @media (max-width: 480px) {
+        height: auto;
+    }
+}
+
+.image-upload label {
+    position: relative;
+
+    .eliminar_foto_perfil {
+        position: absolute;
+        display: inline-grid;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: transparent;
+        border: none;
+        width: 30px;
+        height: 30px;
+        right: 0;
+        color: color.$white;
+        font-size: 20px;
+        cursor: pointer;
+
+
+        i {
+            text-shadow: 0px 0px 10px color.$black
+        }
+    }
+}
+
+
+
+/* Invisible texto */
+figcaption {
+    font-style: italic;
+    color: transparent;
+    font-size: 12px;
+}
+
+
+/* Visible texto */
+.image-upload:hover>figcaption {
+    display: block;
+    text-align: center;
+    color: rgba(128, 128, 128, 0.666);
+    transition: all .5s ease;
+}
+
+.nombre_perfil {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+
+    @media (max-width: 950px) {
+        padding-bottom: 20px;
+    }
+}
+
+
+/*
+* Inputs
+*/
+
+.contenedor_perfil .perfil .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+
+    @media (max-width: 950px) {
+        gap: 20px;
+    }
+
+    @media (max-width: 580px) {
+        gap: 15px;
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 480px) {
+        padding: 0 10px;
+    }
+}
+
+.contenedor_perfil .perfil .content div .input {
+
+    @media (max-width: 1050px) {
+        padding-left: 10px;
+    }
+
+    @media (max-width: 375px) {
+        font-size: 10px;
+        height: 30px;
+    }
+
+    @media (max-width: 335px) {
+        font-size: 8px;
+    }
+}
+
+/* Ajusta el padding interno de las opciones */
+#sexo_usuario option {
+    padding: 50px;
+}
+
+
+// Input de cambio de contraseña
+#currentPassword {
+    margin-bottom: 15px;
+}
+
+#swal2-html-container {
+    padding-left: 5px;
+    padding-right: 5px;
+
+    @media (min-width: 500px) {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+    }
+}
+
+#swal2-input {
+    border-radius: 8px;
+    background-color: color.$bg_elements;
+}
+
+#swal2-input,
+.input_passw {
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+#swal2-input,
+.input_passw:focus,
+.input_passw:active {
+    border: 1px solid color.$primary !important;
+}
+
+// BOTONES
+.contenedor_boton {
+    display: grid;
+    justify-content: center;
+    margin-top: 15px;
+}

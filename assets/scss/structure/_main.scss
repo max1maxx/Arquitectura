@@ -1,0 +1,98 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+// Importaciones generales
+@use '../vars/colors' as color;
+
+/* MAIN */
+main {
+	width: 100%;
+	padding: 24px 20px 20px 20px;
+	margin-top: 64px;
+}
+
+main .title {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 10px;
+
+	@media (max-width: 480px) {
+		font-size: 20px;
+	}
+}
+
+main .breadcrumbs {
+	display: flex;
+	grid-gap: 6px;
+	padding: 10px;
+	border-radius: 0px 10px 10px 10px;
+	box-shadow:
+		inset 8px 8px 12px color.$shadow,
+		inset -8px -8px 12px color.$white;
+}
+
+main .breadcrumbs li,
+main .breadcrumbs li a {
+	font-size: 14px;
+
+	@media (max-width: 480px) {
+		font-size: 10px;
+	}
+}
+
+main .breadcrumbs li a {
+	color: color.$secundary-light;
+}
+
+main .breadcrumbs li a.active,
+main .breadcrumbs li.divider {
+	color: var(--dark-grey);
+	pointer-events: none;
+}
+
+
+.general_contenedor {
+	width: auto;
+	margin-top: 25px;
+}
+
+.general_contenedor .info-data .contenedor_perfil {
+	display: grid;
+	padding: 20px;
+	border-radius: 10px;
+	background: var(--bg_contents);
+	box-shadow: 4px 4px 16px rgba(var(--dark), .05);
+
+	@media (max-width: 480px) {
+		font-size: 10px;
+		padding: 20px 0px;
+	}
+
+	@media (max-width: 335px) {
+		padding: 10px;
+	}
+
+	@media (max-width: 315px) {
+		display: block;
+	}
+}
+
+.contenedor_perfil .perfil {
+    padding: 0;
+
+    @media (max-width: 335px) {
+        padding: 0;
+    }
+
+    @media (max-width: 300px) {
+        display: block;
+    }
+}

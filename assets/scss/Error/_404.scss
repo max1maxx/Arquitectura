@@ -1,0 +1,97 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+//sass --watch assets/scss/Error/_404.scss:assets/css/Error/404.css --load-path=assets/scss
+
+@use '../vars/colors' as color;
+@use '../structure/static';
+
+.cookie-message {
+    display: none !important;
+}
+
+
+.title,
+.subtitle,
+.text {
+    text-align: center;
+}
+
+.title {
+    font-size: 150px;
+
+    @media(max-width: 580px) {
+        font-size: 125px;
+    }
+
+    @media(max-width: 450px) {
+        font-size: 115px;
+    }
+
+    @media((max-width: 335px) and (min-width: 0px)) {
+        font-size: 100px;
+    }
+}
+
+.subtitle {
+    font-size: 50px;
+    padding-bottom: 20px;
+    color: rgb(73, 73, 73);
+
+    @media(max-width: 580px) {
+        font-size: 35px;
+    }
+
+    @media(max-width: 450px) {
+        font-size: 25px;
+    }
+
+    @media((max-width: 335px) and (min-width: 0px)) {
+        font-size: 20px;
+    }
+}
+
+.text {
+    font-size: 20px;
+    padding-bottom: 40px;
+
+    @media(max-width: 450px) {
+        font-size: 15px;
+    }
+
+    @media((max-width: 335px) and (min-width: 0px)) {
+        font-size: 10px;
+    }
+}
+
+.switch {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.enlace_admin {
+    color: darken(color.$gray, 40%);
+    text-decoration: none;
+}
+
+.content_button {
+    display: grid;
+    justify-content: center;
+
+    .button {
+        display: flex;
+        letter-spacing: 1.15px;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+}

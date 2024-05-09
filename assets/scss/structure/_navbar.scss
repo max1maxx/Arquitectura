@@ -1,0 +1,466 @@
+/*
+ * ----------------------------------------------------------------------------
+ * Propiedad de <Armando Josue Velasquez Delgado> <<https://armandovelasquez.com>>
+ * Todos los derechos reservados. Ninguna parte de este software puede ser 
+ * reproducida, distribuida o transmitida de ninguna forma o por ningún medio, 
+ * electrónico o mecánico, incluyendo fotocopias, grabaciones o cualquier otro 
+ * sistema de almacenamiento y recuperación de información, sin el permiso 
+ * previo por escrito del autor.
+ * ----------------------------------------------------------------------------
+ */
+
+// Importaciones generales
+@use '../vars/colors' as color;
+
+nav {
+	background: var(--bg_contents);
+	height: 64px;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	border-radius: 0px 0px 0px 20px;
+	grid-gap: 28px;
+	margin-left: 230px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 199;
+	transition: all 0.3s ease;
+	box-shadow:
+		0px 8px 10px color.$shadow,
+		-10px -10px 10px color.$white;
+
+	@media (max-width: 800px) {
+		margin-left: 70px;
+	}
+
+	@media (max-width: 380px) {
+		grid-gap: 10px;
+	}
+
+	@media (max-width: 335px) {
+		grid-gap: 5px;
+	}
+
+	@media (max-width: 300px) {
+		grid-gap: 3px;
+	}
+}
+
+.name_user {
+	font-size: 15px;
+	font-weight: bold;
+	color: darken(color.$gray, 30%);
+}
+
+nav .toggle-sidebar {
+	display: grid;
+	justify-content: center;
+	font-size: 18px;
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow:
+		inset 8px 8px 12px color.$shadow,
+		inset -8px -8px 12px color.$white;
+}
+
+nav .toggle-sidebar:hover {
+	background-color: color.$shadow;
+}
+
+nav form {
+	max-width: 400px;
+	width: 100%;
+	margin-right: auto;
+}
+
+nav .divider {
+	width: 1px;
+	background: var(--bg_hover_elements);
+	height: 12px;
+	display: block;
+}
+
+nav .contenedor_user {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	gap: 10px;
+	padding: 3px 20px;
+	box-shadow:
+		inset 8px 8px 12px color.$shadow,
+		inset -8px -8px 12px color.$white;
+
+	@media(max-width: 380px) {
+		padding-right: 5px;
+	}
+
+	@media(max-width: 300px) {
+		padding-left: 10px;
+		gap: 3px;
+	}
+}
+
+nav .contenedor_user .profile {
+	position: relative;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	border: 3px solid transparent;
+	transition: 0.25s ease-in-out;
+	transform-origin: center;
+	z-index: 1002;
+}
+
+nav .contenedor_user .profile:hover,
+nav .contenedor_user .profile:active {
+	backdrop-filter: blur(90px);
+	border: 3px dashed color.$primary;
+	transition: .25s ease-in-out;
+}
+
+nav .contenedor_user .profile img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	object-fit: cover;
+	cursor: pointer;
+	background-color: color.$primary;
+}
+
+nav .contenedor_user .profile .profile-link {
+	position: absolute;
+	top: calc(100% + 15px);
+	right: 0;
+	background: var(--bg_contents);
+	padding: 10px 0;
+	box-shadow: 4px 4px 16px rgba(var(--dark), .1);
+	border-radius: 10px;
+	width: 160px;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .3s ease;
+
+	box-shadow:
+		5px 5px 10px var(--dark-grey),
+		inset 8px 8px 12px darken(color.$shadow, 10%),
+		inset -8px -8px 12px color.$white;
+}
+
+nav .contenedor_user .profile .profile-link.show {
+	opacity: 1;
+	pointer-events: visible;
+}
+
+nav .contenedor_user .profile .profile-link a {
+	padding: 10px 16px;
+	display: flex;
+	grid-gap: 10px;
+	font-size: 14px;
+	color: var(--dark);
+	align-items: center;
+	transition: all .3s ease;
+}
+
+nav .contenedor_user .profile .profile-link a.active,
+nav .contenedor_user .profile .profile-link a.active:hover {
+	background: darken(color.$primary, 10%);
+	color: color.$white;
+	box-shadow:
+		inset 8px 8px 12px darken(color.$primary, 20%),
+		inset -8px -8px 12px lighten(color.$primary, 10%);
+}
+
+nav .contenedor_user .profile .profile-link a:hover {
+	background: var(--bg_hover_elements);
+	box-shadow:
+		inset 8px 8px 12px darken(color.$shadow, 10%),
+		inset -8px -8px 12px darken(color.$white, 10%);
+}
+
+// NOTIFICACIONES
+nav .contenedor_notificacion {
+	display: grid;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow:
+		inset 6px 6px 6px color.$shadow,
+		inset -8px -8px 12px color.$white;
+}
+
+.notification_box,
+.notification_content,
+.notification_btns {
+	display: flex;
+}
+
+nav .contenedor_notificacion .notification_btn,
+nav .contenedor_notificacion #toggleBtn {
+	width: 40px;
+	height: 40px;
+}
+
+nav .contenedor_notificacion button {
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	font-size: 20px;
+	position: relative;
+}
+
+.notificacion {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	background-color: var(--red);
+	color: color.$white;
+	border-radius: 50%;
+	padding: 4px 6px;
+	font-size: 9px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+// Definir el valor predeterminado
+$altura_notification_box: 64px;
+
+.contenedor_notificaciones {
+	background-color: transparent;
+	position: fixed;
+	border-radius: 10px;
+	top: 5rem;
+	right: 5px;
+	padding-right: 5px;
+	padding-left: 0px;
+	margin-left: 72px;
+	display: grid;
+	gap: 5px;
+	z-index: 1001;
+	opacity: .5;
+	max-height: calc(2 * #{$altura_notification_box} + 5px);
+	overflow-y: auto;
+	transition: opacity .3s ease-in-out;
+
+	@media (max-width: 400px) {
+		max-height: calc(2 * #{$altura_notification_box} + 25px);
+	}
+
+	@media (max-width: 350px) {
+		transform: scale(.8);
+		transform-origin: top right;
+		top: 70px;
+		margin-left: 22px;
+	}
+
+	&:hover {
+		opacity: 1;
+		max-height: calc(6 * #{$altura_notification_box} + 25px);
+
+		@media (max-width: 400px) {
+			max-height: calc(6 * #{$altura_notification_box} + 85px);
+		}
+	}
+
+	&::-webkit-scrollbar {
+		width: 3px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border: 1px solid color.$gray;
+		background: rgba(color.$gray, 0.3);
+		border-radius: 20px;
+		box-shadow: inset 1px 1px 0 lighten(color.$gray, 10%),
+			inset -1px -1px 0 lighten(color.$gray, 10%);
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background: lighten(color.$gray, 0%);
+	}
+}
+
+.contenedor_notificacion.active {
+	background-color: color.$bg_elements;
+	box-shadow:
+		0.3rem 0.3rem 0.5rem color.$shadow,
+		-0.2rem -0.2rem 0.5rem color.$white;
+}
+
+.notification_box {
+	background-color: rgba(color.$white, .7);
+	border-radius: 0.75em;
+	box-shadow: 0 0.5em 1em rgba(color.$shadow_box_notification, 0.1);
+	height: $altura_notification_box;
+	backdrop-filter: blur(0);
+	transition: backdrop-filter 0.2s ease-in-out;
+
+	@media (max-width: 400px) {
+		height: $altura_notification_box + 10px;
+	}
+
+	.contenedor_notificaciones:hover & {
+		backdrop-filter: blur(5px);
+
+	}
+
+	@media (prefers-color-scheme: dark) {
+		background-color: rgba(color.$bg_box_notification, 0.8);
+	}
+
+	.notification_content {
+		padding: 0.375em 1em;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		color: color.$bg_elements;
+
+
+		.notification_icon {
+			flex-shrink: 0;
+			margin-right: 0.75em;
+			width: 2em;
+			height: 2em;
+
+			@media (max-width: 335px) {
+				.notification_icon-svg {
+					width: 20px;
+					height: 20px;
+				}
+
+				display: grid;
+				width: 1em;
+				height: 1em;
+				justify-content: center;
+				align-content: center;
+			}
+		}
+
+		.notification_text {
+			line-height: 1.333;
+			width: 100%;
+
+			.notification_text-title {
+				font-size: 0.75em;
+				font-weight: bold;
+
+				@media (max-width: 350px) {
+					font-size: 0.7em;
+				}
+			}
+
+			.notification_text-subtitle {
+				font-size: 0.6em;
+				opacity: 0.75;
+
+				@media (max-width: 350px) {
+					font-size: 0.55em;
+				}
+			}
+
+			.notification_text_time {
+				font-size: 0.5em;
+				text-align: right;
+				opacity: .8;
+			}
+		}
+	}
+
+	.notification_btns {
+		box-shadow: -1px 0 0 rgba(color.$shadow_box_notification, 0.15);
+		flex-direction: column;
+		flex-shrink: 0;
+		min-width: 4em;
+		height: 100%;
+
+		@media (prefers-color-scheme: dark) {
+			box-shadow: -1px 0 0 rgba(color.$btns_shadow_notification, 0.15);
+		}
+
+		.notification_btn {
+			background-color: transparent;
+			box-shadow: 0 0 0 rgba(color.$shadow_box_notification, 0.5) inset;
+			color: color.$white;
+			font-size: 0.6em;
+			line-height: 1;
+			width: 100%;
+			font-weight: 500;
+			height: 100%;
+			padding: 0 0.5rem;
+			-webkit-appearance: none;
+			appearance: none;
+			-webkit-tap-highlight-color: transparent;
+
+			&:first-of-type {
+				border-radius: 0 0.75rem 0 0;
+			}
+
+			&:last-of-type {
+				border-radius: 0 0 0.75rem 0;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				box-shadow: 0 -1px 0 rgba(color.$btns_shadow_notification, 0.15);
+			}
+
+			&:hover {
+				background-color: color.$bg_box_notification;
+
+				&:only-of-type {
+					border-radius: 0 0.75rem 0.75rem 0;
+				}
+
+			}
+		}
+	}
+}
+
+// fondo para notificacion de timer
+#sesion_timer_notificacion {
+	backdrop-filter: blur(5px);
+
+	@media (prefers-color-scheme: dark) {
+		background-color: rgba(color.$btn_time_notification, 0.8);
+	}
+
+	.notification_text {
+		.notification_text-title {
+			font-size: 0.90em;
+
+			@media (max-width: 350px) {
+				font-size: 0.7em;
+			}
+		}
+
+		.notification_text-subtitle {
+			font-size: 0.8em;
+		}
+	}
+
+	.notification_btn {
+		&:first-of-type {
+			border-radius: 0 0.75rem 0.75rem 0;
+		}
+
+		&:hover {
+			background-color: darken(color.$btn_time_notification, 5%);
+		}
+	}
+}
+
+.no_notifications {
+	width: 100%;
+	display: grid;
+	justify-content: center;
+	font-size: 10px;
+}
